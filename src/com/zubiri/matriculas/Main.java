@@ -27,12 +27,8 @@ public class Main {
 						break;
 						
 					case 2: //Mostrar alumnos
-						try{
 							System.out.println("Listad de Alumnos matriculados: ");	
-							System.out.println(Alumnos.formatted());
-						}catch (Exception e){
-							System.out.println(e);
-						}						
+							Matriculas.mostrarMatriculas();
 						break;
 					case 0: //Salimos
 						break;
