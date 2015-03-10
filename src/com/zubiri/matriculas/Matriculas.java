@@ -52,14 +52,15 @@ public class Matriculas extends Matricula {
 		}
 	}
 	
-	public static ArrayList<Matricula> crearMatriculas(Scanner sc){
+	public static /*ArrayList<Matricula>*/void crearMatriculas(Scanner sc){
 		int opcion;
 		System.out.println("¿Cuántos matriculas quieres crear? ");
 		opcion = sc.nextInt();
 		for (int a = 0; a < opcion; a++) {
-			listaMatriculas.add(new Matricula(sc));
+			//listaMatriculas.add(new Matricula(sc));
+			new Matricula(sc);
 		}
-		return listaMatriculas;
+		//return listaMatriculas;
 	}
 	
 	public static void anyadirMatricula(Matricula matricula){

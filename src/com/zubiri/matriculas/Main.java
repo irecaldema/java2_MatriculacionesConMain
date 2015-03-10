@@ -16,7 +16,8 @@ public class Main {
 			try{
 				//Visualiza por terminal (stdout) las opciones del menu
 				System.out.println("Matricular---------------------------------------------1");
-				System.out.println("Mostrar alumnos matriculados---------------------------2");
+				System.out.println("Matriculacion multiple---------------------------------2");
+				System.out.println("Mostrar alumnos matriculados---------------------------3");
 				System.out.println("SALIR DEL PROGRAMA-------------------------------------0");
 				   
 				seleccion = sc.nextInt();
@@ -25,8 +26,12 @@ public class Main {
 					case 1: //Matricular alumno
 						Matricula matricula = new Matricula(sc);
 						break;
+					
+					case 2: //Matricular alumno
+						Matriculas.crearMatriculas();
+						break;	
 						
-					case 2: //Mostrar alumnos
+					case 3: //Mostrar alumnos
 							System.out.println("Listad de Alumnos matriculados: ");	
 							Matriculas.mostrarMatriculas();
 						break;

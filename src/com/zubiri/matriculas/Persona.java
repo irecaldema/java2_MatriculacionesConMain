@@ -77,11 +77,11 @@ public abstract class Persona {
 	}
 	
 	/**
-	 * Método que obtiene valores de una persona a partir de un String y 
+	 * Metodo que obtiene valores de una persona a partir de un String y 
 	 * un caracter separador.
 	 */
 	public void split(String personaStr, char separator) {
-		String[] strArray = personaStr.split(separator);
+		String[] strArray = personaStr.split(separator+"");
 		this.setDni(strArray[0]);
 		this.setNombre(strArray[1]);
 		this.setApellido(strArray[2]);

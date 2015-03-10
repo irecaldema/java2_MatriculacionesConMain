@@ -28,12 +28,14 @@ public class Matricula extends Asignatura {
 				 sc.nextLine();
 			}
     	} while(precio < 0);
+    	Matriculas.anyadirMatricula(this);
     }
     
     public Matricula(String nombre, int creditos, Profesor profesor, int anyoMatriculacion, double precio) {
     	super(nombre, creditos, profesor);
     	this.anyoMatriculacion = anyoMatriculacion;
     	this.precio = precio;
+    	Matriculas.anyadirMatricula(this);
     }
     
 	/*public String getAsignatura() {
@@ -61,7 +63,7 @@ public class Matricula extends Asignatura {
 	}
     
 	/**
-	 * Método que calcula un descuento basado en porcentaje sobre el precio original
+	 * Metodo que calcula un descuento basado en porcentaje sobre el precio original
 	 * de la matrícula.
 	 * @return
 	 */
