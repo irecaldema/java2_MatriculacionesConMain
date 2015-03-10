@@ -1,4 +1,5 @@
-package com.zubiri.matriculas;
+import com.zubiri.matriculas.Matricula;
+import com.zubiri.matriculas.Matriculas;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -28,7 +29,7 @@ public class Main {
 						break;
 					
 					case 2: //Matricular alumno
-						Matriculas.crearMatriculas();
+						Matriculas.crearMatriculas(sc);
 						break;	
 						
 					case 3: //Mostrar alumnos
