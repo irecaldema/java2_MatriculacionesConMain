@@ -20,7 +20,7 @@ public class Asignatura {
 				 System.out.println("Debes introducir un número.\n");
 				 sc.nextLine();
 			}
-		} while (creditos < 0);
+		} while (creditos <= 0);
 		System.out.println("Datos del profesor: \n");
 		setProfesor(new Profesor(sc));
 	}

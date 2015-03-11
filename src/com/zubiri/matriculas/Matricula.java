@@ -27,7 +27,7 @@ public class Matricula extends Asignatura {
 				 System.out.println("Debes introducir un número.\n");
 				 sc.nextLine();
 			}
-    	} while(precio < 0);
+    	} while(precio <= 0);
     	Matriculas.anyadirMatricula(this);
     }
     
