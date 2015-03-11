@@ -24,8 +24,7 @@ public class Main {
 				switch (seleccion) {
 					
 					case 1: //Matricular alumno
-						Alumno alumno = new Alumno(sc);
-						alumnos.add(alumno);
+						alumnos.add(new Alumno(sc));
 						break;
 					
 					case 2: //Mostrar alumnos
