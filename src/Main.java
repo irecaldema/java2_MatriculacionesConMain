@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		
 		int seleccion=-1;
-		ArrayList<Alumno> alumnos=null;
+		ArrayList<Alumno> alumnos= new ArrayList<Alumno>();
 		Scanner sc = new Scanner(System.in);
 
 		do {
@@ -24,7 +24,8 @@ public class Main {
 				switch (seleccion) {
 					
 					case 1: //Matricular alumno
-						alumnos.add(new Alumno(sc));
+						Alumno alumno = new Alumno(sc);
+						alumnos.add(alumno);
 						break;
 					
 					case 2: //Mostrar alumnos
