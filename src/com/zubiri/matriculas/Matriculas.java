@@ -15,6 +15,15 @@ public class Matriculas extends Matricula {
 		super(nombre, creditos, profesor, anyoMatriculacion, precio);
 	}
 	
+	public static ArrayList<Matricula> getMatriculas(){
+		return listaMatriculas;
+	}
+	
+	public static void setMatriculas(ArrayList<Matricula> matris){
+		listaMatriculas=matris;
+	}
+	
+	
 	public static void buscarMatriculasNombre(String nombre) {
 		int i;
 		
@@ -43,6 +52,18 @@ public class Matriculas extends Matricula {
 	}
 	
 	public static void mostrarMatriculas() {
+		
+		if (listaMatriculas.size() == 0) {
+			System.out.println("No se han cargado las matriculas");
+		}
+		for (int i = 0;i < listaMatriculas.size();i++) {
+			System.out.println(listaMatriculas.get(i).formatted());
+		}
+	}
+	
+	public static void mostrarMatriculas(ArrayList<Matricula> matris) {
+		
+		setMatriculas(matris);
 		
 		if (listaMatriculas.size() == 0) {
 			System.out.println("No se han cargado las matriculas");

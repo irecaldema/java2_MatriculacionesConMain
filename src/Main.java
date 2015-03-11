@@ -1,40 +1,43 @@
-import com.zubiri.matriculas.Matricula;
-import com.zubiri.matriculas.Matriculas;
+import com.zubiri.matriculas.Alumno;
 
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.ArrayList;
 
 public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
 		int seleccion=-1;
+		ArrayList<Alumno> alumnos=null;
 		Scanner sc = new Scanner(System.in);
 
 		do {
 			try{
 				//Visualiza por terminal (stdout) las opciones del menu
 				System.out.println("Matricular---------------------------------------------1");
-				System.out.println("Matriculacion multiple---------------------------------2");
-				System.out.println("Mostrar alumnos matriculados---------------------------3");
+				System.out.println("Mostrar alumnos matriculados---------------------------2");
 				System.out.println("SALIR DEL PROGRAMA-------------------------------------0");
 				   
 				seleccion = sc.nextInt();
 				switch (seleccion) {
 					
 					case 1: //Matricular alumno
-						Matricula matricula = new Matricula(sc);
-						//Matriculas.buscarMatriculasAnyo(matricula.getAnyoMatriculacion());
+						alumnos.add(new Alumno(sc));
 						break;
 					
-					case 2: //Matricular alumno
-						Matriculas.crearMatriculas(sc);
-						break;	
-						
-					case 3: //Mostrar alumnos
+					case 2: //Mostrar alumnos
+						try{
 							System.out.println("Listad de Alumnos matriculados: ");	
-							Matriculas.mostrarMatriculas();
+							for (int i=0;i<alumnos.size();i++){
+								System.out.println("Alumno "+i+1+": \n");
+								alumnos.get(i).mostrarPersona();
+							}
+						}catch(NullPointerException e){
+							System.out.println("No hay alumnos matriculados");
+						}
+							
 						break;
 					case 0: //Salimos
 						break;

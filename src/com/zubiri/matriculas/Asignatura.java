@@ -21,6 +21,7 @@ public class Asignatura {
 				 sc.nextLine();
 			}
 		} while (creditos < 0);
+		System.out.println("Datos del profesor: \n");
 		setProfesor(new Profesor(sc));
 	}
 	

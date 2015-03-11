@@ -37,6 +37,8 @@ public class Alumno extends Persona {
 		System.out.print("Ciclo: ");
 		this.setCiclo(sc.next());
 		this.numAlumnos++;
+		Matriculas.crearMatriculas(sc);
+		setMatriculas(Matriculas.getMatriculas());
 	}
 	
 	public int getAnyoInscripcion() {
@@ -79,6 +81,7 @@ public class Alumno extends Persona {
 		super.mostrarPersona();
 		System.out.println("Año de inscipción: " + this.getAnyoInscripcion());
 		System.out.println("Ciclo: " + this.getCiclo());
+		Matriculas.mostrarMatriculas(this.matriculas);
 	}
 
 	public int getNumAlumnos() {
