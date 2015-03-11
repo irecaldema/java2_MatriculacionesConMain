@@ -4,7 +4,6 @@ import com.zubiri.matriculas.Matriculas;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.InputMismatchException;
-import java.io.FileNotFoundException;
 
 public class Main {
 
