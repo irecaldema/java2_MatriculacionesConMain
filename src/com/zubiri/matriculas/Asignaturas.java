@@ -29,7 +29,7 @@ public class Asignaturas extends Asignatura {
 			}
 		}
 		if (i == listaAsignaturas.size()) {
-			System.out.println("No se ha encontrado");
+			System.out.println("No se han encontrado asignaturas");
 		}
 	}
 	

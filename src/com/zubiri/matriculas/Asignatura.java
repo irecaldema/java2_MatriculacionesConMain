@@ -21,7 +21,7 @@ public class Asignatura {
 				 sc.nextLine();
 			}
 		} while (creditos < 0);
-		Profesor profesor = new Profesor(sc);
+		setProfesor(new Profesor(sc));
 	}
 	
 	public Asignatura (String nombre, int creditos, Profesor profesor) {
@@ -55,7 +55,7 @@ public class Asignatura {
 	}
 	
 	/**
-	 * Método que retorna un String con los valores de las propiedades
+	 * Metodo que retorna un String con los valores de las propiedades
 	 * formateados del siguiente modo:
 	 *  <NOMBRE_PROPIEDAD1> : <VALOR_PROPIEDAD1>\n
 	 *  <NOMBRE_PROPIEDAD2> : <VALOR_PROPIEDAD2>\n 

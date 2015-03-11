@@ -54,7 +54,7 @@ public abstract class Persona {
 	}
 	
 	/**
-	 * Método que retorna un String con los valores de las propiedades
+	 * Metodo que retorna un String con los valores de las propiedades
 	 * formateados del siguiente modo:
 	 *  <NOMBRE_PROPIEDAD1> : <VALOR_PROPIEDAD1>\n
 	 *  <NOMBRE_PROPIEDAD2> : <VALOR_PROPIEDAD2>\n 

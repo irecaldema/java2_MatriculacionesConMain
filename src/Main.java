@@ -1,3 +1,4 @@
+import com.zubiri.matriculas.Asignatura;
 import com.zubiri.matriculas.Matricula;
 import com.zubiri.matriculas.Matriculas;
 
@@ -25,6 +26,7 @@ public class Main {
 					
 					case 1: //Matricular alumno
 						Matricula matricula = new Matricula(sc);
+						Matriculas.buscarMatriculasAnyo(matricula.getAnyoMatriculacion()).formatted();
 						break;
 					
 					case 2: //Matricular alumno

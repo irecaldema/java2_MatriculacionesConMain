@@ -25,7 +25,7 @@ public class Matriculas extends Matricula {
 			}
 		}
 		if (i == listaMatriculas.size()) {
-			System.out.println("No se ha encontrado");
+			System.out.println("No se han encontrado matriculas");
 		}
 	}
 	
@@ -38,7 +38,7 @@ public class Matriculas extends Matricula {
 			}
 		}
 		if (i == listaMatriculas.size()) {
-			System.out.println("No se ha encontrado");
+			System.out.println("No se ha encontrado la matricula");
 		}
 	}
 	
