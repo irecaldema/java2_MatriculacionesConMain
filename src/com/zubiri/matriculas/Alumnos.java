@@ -30,9 +30,9 @@ public class Alumnos {
 		}
 	}
 	
-	public static void borrarAlumno(String nombre){
+	public static void borrarAlumno(String dni){
 		for (int b = 0; b < alumnos.size(); b++) {
-			if (alumnos.get(b).getNombre().equalsIgnoreCase(nombre)) {
+			if (alumnos.get(b).getDni().equalsIgnoreCase(dni)) {
 				alumnos.remove(b);
 			}
 		}
