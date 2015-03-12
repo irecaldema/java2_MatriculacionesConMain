@@ -42,11 +42,11 @@ public class Alumnos {
 		alumnos.add(alumno);
 	}
 	
-	public static void buscarAlumnos(String nombre) {
+	public static void buscarAlumno(String dni) {
 		int i;
 		
 		for(i =0; i<alumnos.size(); i++) {
-			if (alumnos.get(i).getNombre().equalsIgnoreCase(nombre)) {
+			if (alumnos.get(i).getDni().equalsIgnoreCase(dni)) {
 				System.out.println(alumnos.get(i).formatted());
 				break;
 			}
