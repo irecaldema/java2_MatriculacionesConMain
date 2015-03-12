@@ -1,31 +1,23 @@
 import com.zubiri.matriculas.Alumno;
 import com.zubiri.matriculas.Alumnos;
-
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.InputMismatchException;
-
 public class Main {
-
 	public static void main(String[] args) throws IOException {
-		
 		int seleccion=-1;
 		Scanner sc = new Scanner(System.in);
-
 		do {
 			try{
 				//Visualiza por terminal (stdout) las opciones del menu
 				System.out.println("Matricular---------------------------------------------1");
 				System.out.println("Mostrar alumnos matriculados---------------------------2");
 				System.out.println("SALIR DEL PROGRAMA-------------------------------------0");
-				   
 				seleccion = sc.nextInt();
 				switch (seleccion) {
-					
 					case 1: //Matricular alumno
 						Alumnos.anyadirAlumno(new Alumno(sc));
 						break;
-					
 					case 2: //Mostrar alumnos
 						Alumnos.mostrarAlumnos();
 						break;
