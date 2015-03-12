@@ -1,16 +1,15 @@
 import com.zubiri.matriculas.Alumno;
+import com.zubiri.matriculas.Alumnos;
 
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.InputMismatchException;
-import java.util.ArrayList;
 
 public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
 		int seleccion=-1;
-		ArrayList<Alumno> alumnos= new ArrayList<Alumno>();
 		Scanner sc = new Scanner(System.in);
 
 		do {
@@ -24,20 +23,11 @@ public class Main {
 				switch (seleccion) {
 					
 					case 1: //Matricular alumno
-						alumnos.add(new Alumno(sc));
+						Alumnos.anyadirAlumno(new Alumno(sc));
 						break;
 					
 					case 2: //Mostrar alumnos
-						try{
-							System.out.println("Listad de Alumnos matriculados: ");	
-							for (int i=0;i<alumnos.size();i++){
-								System.out.println("Alumno "+i+1+": \n");
-								alumnos.get(i).mostrarPersona();
-							}
-						}catch(NullPointerException e){
-							System.out.println("No hay alumnos matriculados");
-						}
-							
+						Alumnos.mostrarAlumnos();
 						break;
 					case 0: //Salimos
 						break;
